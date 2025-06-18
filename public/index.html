@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчёт стоимости</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="block-container">
+        <div class="header">
+            <h2 class="section-title">Расчёт стоимости</h2>
+        </div>
+        <div class="main-container">
+            <div class="form-wrapper">
+                <div class="form-info">
+                    <h1>Расчёт<br>стоимости</h1>
+                    <p>С вами свяжется наш менеджер<br>в ближайшее время. Спасибо, что<br>обратились в наше печатное агентство!</p>
+                </div>
+                <div class="form-body">
+                    <form id="contact-form" novalidate>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Телефон" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="@email" required>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="company" name="company" placeholder="Компания">
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="task" name="task" placeholder="Опишите задачу" required></textarea>
+                            <div class="error-message"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="promo" name="promo" placeholder="Промокод">
+                            <div class="error-message"></div>
+                        </div>
+                        <button type="submit">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+            <div id="success-message" class="success-message">
+                Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

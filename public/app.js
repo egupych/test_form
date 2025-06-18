@@ -1,3 +1,9 @@
+
+
+
+
+//  #region Валидация формы с форматированием телефона и проверкой email
+
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contact-form');
     const successMessage = document.getElementById('success-message');
@@ -179,7 +185,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Показать сообщение об успехе
     const showSuccessMessage = (message) => {
-        successMessage.textContent = message || 'Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.';
+        successMessage.textContent = message || 'Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время';
         successMessage.classList.add('show');
         setTimeout(() => {
             successMessage.classList.remove('show');
@@ -189,7 +195,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Показать сообщение об ошибке
     const showErrorMessage = (message) => {
         successMessage.style.backgroundColor = '#e74c3c';
-        successMessage.textContent = message || 'Произошла ошибка. Попробуйте позже.';
+        successMessage.textContent = message || 'Произошла ошибка. Попробуйте позже';
         successMessage.classList.add('show');
         setTimeout(() => {
             successMessage.classList.remove('show');
@@ -226,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         } catch (error) {
             console.error('Ошибка сети:', error);
-            return { success: false, message: 'Ошибка соединения с сервером. Проверьте интернет-подключение.' };
+            return { success: false, message: 'Ошибка соединения с сервером. Проверьте интернет-подключение' };
         }
     };
 
@@ -274,3 +280,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+//  #endregion Валидация формы с форматированием телефона и проверкой email
