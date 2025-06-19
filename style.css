@@ -1,20 +1,20 @@
 /* #region Стили шрифта Gilroy */
 @font-face {
     font-family: 'medium';
-    src: url('/fonts/Gilroy-Medium.woff2') format('woff2');
-    src: url('/fonts/Gilroy-Medium.woff') format('woff');
+    src: url('Gilroy-Medium.woff2') format('woff2');
+    src: url('Gilroy-Medium.woff') format('woff');
   }
   
   @font-face {
     font-family: 'semibold';
-    src: url('/fonts/Gilroy-SemiBold.woff2') format('woff2');
-    src: url('/fonts/Gilroy-SemiBold.woff') format('woff');
+    src: url('Gilroy-SemiBold.woff2') format('woff2');
+    src: url('Gilroy-SemiBold.woff') format('woff');
   }
   
   @font-face {
     font-family: 'bold';
-    src: url('/fonts/Gilroy-Bold.woff2') format('woff2');
-    src: url('/fonts/Gilroy-Bold.woff') format('woff');
+    src: url('Gilroy-Bold.woff2') format('woff2');
+    src: url('Gilroy-Bold.woff') format('woff');
   }
 /* #endregion Стили шрифта Gilroy */
 
@@ -29,6 +29,32 @@
     --gray: #E3E3E3;
     --dark-gray: #8F8F8F;
 
+    --gap-site: 100px;
+    --gap-header: 60px;
+    --gap-block-container: 60px;
+    --gap: 16px;
+
+    --width-container: 1140px;
+
+    --size-h1: 64px;
+    --size-h2: 48px;
+    --size-h3: 32px;
+    --size-h4: 24px;
+    --size-h5: 20px;
+    --size-text-panda: 16px;
+    --size-text-small-panda: 13px;
+    --size-button-panda: 16px;
+    --size-header-container: 18px;
+
+    --line-height-h1: 110%;
+    --line-height-h2: 105%;
+    --line-height-h3: 120%;
+    --line-height-h4: 120%;
+    --line-height-h5: 125%;
+    --line-text-panda: 140%;
+    --line-text-small-panda: 120%;
+    --line-button-panda: 120%;
+    --line-header-container: 130%;
 }
 /* #endregion Общие стили и переменные */
 
@@ -107,6 +133,9 @@ a {
 /* #region Стилизация html, body */
 html, body {
     font-family: 'medium', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased; /* Делает текст тоньше и четче */
+    text-wrap: balance; /* Балансирует переносы слов */
+    text-wrap: pretty; /* Альтернативный вариант для более старых браузеров */
 }
 
 body {
@@ -118,12 +147,12 @@ body {
     align-items: center;
     min-height: 100vh;
 }
+
 /* #endregion Стилизация html, body */
 
 /* #region Контейнер */
-
 .header {
-    width: 1140px;
+    width: var(--width-container);
 }
 
 h2 {
@@ -139,10 +168,11 @@ h2 {
     align-items: center;
     width: 100%;
     flex-direction: column;
+    gap: var(--gap-header);
 }
 
 .main-container {
-    max-width: 1140px;
+    max-width: var(--width-container);
     width: 100%;
     background-color: var(--panda-white);
     padding-top: 100px;
@@ -160,9 +190,8 @@ h2 {
     letter-spacing: 1px;
     display: flex;
     align-items: center;
-    gap: 20px;
-    margin-bottom: 40px;
     margin-top: 0;
+    gap: var(--gap);
 }
 
 .section-title::after {
@@ -224,11 +253,14 @@ textarea {
     width: 100%;
     border: none;
     border-bottom: 1px solid var(--panda-black);
-    padding: 15px 0 10px 0;
+    padding: 34px 0 5px 0;
     font-size: 16px;
     color: var(--panda-black);
     background-color: transparent;
     transition: panda-black 0.3s ease;
+    {
+        
+    }
 }
 /* #endregion Стилизация формы */
 
@@ -262,7 +294,7 @@ textarea.error {
     font-size: 12px;
     position: absolute;
     left: 0;
-    bottom: -20px;
+    bottom: calc(var(--gap) * -1);
     opacity: 0;
     transition: opacity 0.3s ease;
 }
