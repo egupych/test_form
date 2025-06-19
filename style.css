@@ -258,9 +258,6 @@ textarea {
     color: var(--panda-black);
     background-color: transparent;
     transition: panda-black 0.3s ease;
-    {
-        
-    }
 }
 /* #endregion Стилизация формы */
 
